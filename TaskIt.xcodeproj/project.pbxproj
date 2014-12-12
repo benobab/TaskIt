@@ -20,6 +20,7 @@
 		EAA3553F1A36572900048013 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA3553D1A36572900048013 /* LaunchScreen.xib */; };
 		EAA3554B1A36572A00048013 /* TaskItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA3554A1A36572A00048013 /* TaskItTests.swift */; };
 		EAE660831A3B611300EC0AB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE660821A3B611300EC0AB6 /* Main.storyboard */; };
+		EAE660851A3B64A500EC0AB6 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE660841A3B64A500EC0AB6 /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		EAA355491A36572A00048013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAA3554A1A36572A00048013 /* TaskItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItTests.swift; sourceTree = "<group>"; };
 		EAE660821A3B611300EC0AB6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EAE660841A3B64A500EC0AB6 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				EA00B4CE1A3B3ADB001EBE17 /* Date.swift */,
 				EA00B4CA1A3AD6D4001EBE17 /* TaskModel.swift */,
 				EA00B4CC1A3ADDB6001EBE17 /* TaskDetailViewController.swift */,
+				EAE660841A3B64A500EC0AB6 /* AddTaskViewController.swift */,
 				EAA3553B1A36572900048013 /* Images.xcassets */,
 				EAA3553D1A36572900048013 /* LaunchScreen.xib */,
 				EAA355321A36572900048013 /* Supporting Files */,
@@ -242,6 +245,7 @@
 				EA00B4CB1A3AD6D4001EBE17 /* TaskModel.swift in Sources */,
 				EAA355351A36572900048013 /* AppDelegate.swift in Sources */,
 				EA00B4CD1A3ADDB6001EBE17 /* TaskDetailViewController.swift in Sources */,
+				EAE660851A3B64A500EC0AB6 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
