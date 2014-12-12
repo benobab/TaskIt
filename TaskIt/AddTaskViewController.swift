@@ -10,6 +10,15 @@ import UIKit
 
 class AddTaskViewController: UIViewController {
 
+    
+    //VAR de la storyBoard
+    @IBOutlet weak var taskTitleTextField: UITextField!
+    @IBOutlet weak var taskDescriptionTextField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    //Référence au tableau de task du ViewController
+    var mainVC : ViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +40,17 @@ class AddTaskViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func cancelButtonPressed(sender: UIButton) {
+        
+        //car on a fait un present modally et non un push
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
+    @IBAction func addTaskButtonPressed(sender: UIButton) {
+        var t = TaskModel(task: taskTitleTextField.text, subTask: taskDescriptionTextField.text, date: datePicker.date)
+        mainVC?.taskArray.append(t)
+        self.dismissViewControllerAnimated(true, completion: nil)
+
+    }
 }

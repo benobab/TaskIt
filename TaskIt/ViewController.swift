@@ -39,6 +39,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    //fonction appellé à chaque fois que la view apparait à l'écran, et non seulement la premiere fois, comme avec viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //TODO
@@ -48,8 +55,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let indexPath = tableView.indexPathForSelectedRow()
             let thisTask = taskArray[indexPath!.row]
             detailVC.detailTaskModel = thisTask
-            
-            
+        }else if (segue.identifier == "addTaskSegue" ){
+            //on change de viewController, on est obligé de spécifié asAddTaskViewController car segue ne connait pas le type de destination tout seul
+            let addTask:AddTaskViewController = segue.destinationViewController as AddTaskViewController
+            //ensuite ICI on dis que le mainVC du AddTaskViewController qu'on appelle, sera en fait ce ViewController actuel
+            //Ca permet de faire en sorte que la taskArray.append(t) fonctionne sur le bon viewController 
+            addTask.mainVC = self
         }
     }
     //UITableViewDataSource
