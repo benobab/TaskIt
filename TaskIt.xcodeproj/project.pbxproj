@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA00B4CB1A3AD6D4001EBE17 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00B4CA1A3AD6D4001EBE17 /* TaskModel.swift */; };
+		EA00B4CD1A3ADDB6001EBE17 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00B4CC1A3ADDB6001EBE17 /* TaskDetailViewController.swift */; };
+		EA00B4CF1A3B3ADB001EBE17 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA00B4CE1A3B3ADB001EBE17 /* Date.swift */; };
+		EA00B4D11A3B3E73001EBE17 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA00B4D01A3B3E73001EBE17 /* Storyboard.storyboard */; };
+		EA30AEDA1A365B6B00344053 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = EA30AED71A365B6B00344053 /* 1.png */; };
+		EA30AEDB1A365B6B00344053 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA30AED81A365B6B00344053 /* 2.png */; };
+		EA30AEDC1A365B6B00344053 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = EA30AED91A365B6B00344053 /* 3.png */; };
+		EA30AEE01A38C4AD00344053 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30AEDF1A38C4AD00344053 /* TaskCell.swift */; };
 		EAA355351A36572900048013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA355341A36572900048013 /* AppDelegate.swift */; };
 		EAA355371A36572900048013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA355361A36572900048013 /* ViewController.swift */; };
-		EAA3553A1A36572900048013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA355381A36572900048013 /* Main.storyboard */; };
 		EAA3553C1A36572900048013 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA3553B1A36572900048013 /* Images.xcassets */; };
 		EAA3553F1A36572900048013 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA3553D1A36572900048013 /* LaunchScreen.xib */; };
 		EAA3554B1A36572A00048013 /* TaskItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA3554A1A36572A00048013 /* TaskItTests.swift */; };
@@ -26,11 +33,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA00B4CA1A3AD6D4001EBE17 /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		EA00B4CC1A3ADDB6001EBE17 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		EA00B4CE1A3B3ADB001EBE17 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		EA00B4D01A3B3E73001EBE17 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		EA30AED71A365B6B00344053 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		EA30AED81A365B6B00344053 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		EA30AED91A365B6B00344053 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		EA30AEDF1A38C4AD00344053 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskCell.swift; path = ../TaskCell.swift; sourceTree = "<group>"; };
 		EAA3552F1A36572900048013 /* TaskIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA355331A36572900048013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAA355341A36572900048013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAA355361A36572900048013 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EAA355391A36572900048013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAA3553B1A36572900048013 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EAA3553E1A36572900048013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EAA355441A36572A00048013 /* TaskItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,12 +91,16 @@
 		EAA355311A36572900048013 /* TaskIt */ = {
 			isa = PBXGroup;
 			children = (
+				EA30AEDF1A38C4AD00344053 /* TaskCell.swift */,
 				EAA355341A36572900048013 /* AppDelegate.swift */,
 				EAA355361A36572900048013 /* ViewController.swift */,
-				EAA355381A36572900048013 /* Main.storyboard */,
+				EA00B4CE1A3B3ADB001EBE17 /* Date.swift */,
+				EA00B4CA1A3AD6D4001EBE17 /* TaskModel.swift */,
+				EA00B4CC1A3ADDB6001EBE17 /* TaskDetailViewController.swift */,
 				EAA3553B1A36572900048013 /* Images.xcassets */,
 				EAA3553D1A36572900048013 /* LaunchScreen.xib */,
 				EAA355321A36572900048013 /* Supporting Files */,
+				EA00B4D01A3B3E73001EBE17 /* Storyboard.storyboard */,
 			);
 			path = TaskIt;
 			sourceTree = "<group>";
@@ -90,6 +108,9 @@
 		EAA355321A36572900048013 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA30AED71A365B6B00344053 /* 1.png */,
+				EA30AED81A365B6B00344053 /* 2.png */,
+				EA30AED91A365B6B00344053 /* 3.png */,
 				EAA355331A36572900048013 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,9 +213,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAA3553A1A36572900048013 /* Main.storyboard in Resources */,
+				EA30AEDA1A365B6B00344053 /* 1.png in Resources */,
+				EA30AEDB1A365B6B00344053 /* 2.png in Resources */,
+				EA30AEDC1A365B6B00344053 /* 3.png in Resources */,
 				EAA3553F1A36572900048013 /* LaunchScreen.xib in Resources */,
 				EAA3553C1A36572900048013 /* Images.xcassets in Resources */,
+				EA00B4D11A3B3E73001EBE17 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAA355371A36572900048013 /* ViewController.swift in Sources */,
+				EA00B4CF1A3B3ADB001EBE17 /* Date.swift in Sources */,
+				EA30AEE01A38C4AD00344053 /* TaskCell.swift in Sources */,
+				EA00B4CB1A3AD6D4001EBE17 /* TaskModel.swift in Sources */,
 				EAA355351A36572900048013 /* AppDelegate.swift in Sources */,
+				EA00B4CD1A3ADDB6001EBE17 /* TaskDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +264,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EAA355381A36572900048013 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EAA355391A36572900048013 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EAA3553D1A36572900048013 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -326,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -407,6 +427,7 @@
 				EAA355501A36572A00048013 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAA355511A36572A00048013 /* Build configuration list for PBXNativeTarget "TaskItTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +436,7 @@
 				EAA355531A36572A00048013 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
