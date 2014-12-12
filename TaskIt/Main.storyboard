@@ -93,6 +93,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ff4-gG-UBK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Qb-fW-xI2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0t4-h1-rZs">
