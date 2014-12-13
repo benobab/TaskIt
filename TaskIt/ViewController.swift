@@ -55,6 +55,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let indexPath = tableView.indexPathForSelectedRow()
             let thisTask = taskArray[indexPath!.row]
             detailVC.detailTaskModel = thisTask
+            detailVC.mainVC = self
         }else if (segue.identifier == "addTaskSegue" ){
             //on change de viewController, on est obligé de spécifié asAddTaskViewController car segue ne connait pas le type de destination tout seul
             let addTask:AddTaskViewController = segue.destinationViewController as AddTaskViewController

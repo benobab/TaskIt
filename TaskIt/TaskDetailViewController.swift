@@ -13,16 +13,18 @@ class TaskDetailViewController: UIViewController {
     
     var detailTaskModel: TaskModel!
     
-    @IBOutlet weak var dateLabel: UIDatePicker!
-    @IBOutlet weak var titleTask: UITextField!
-    @IBOutlet weak var descriptionTask: UITextField!
+    var mainVC:ViewController!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var titleTaskTextField: UITextField!
+    @IBOutlet weak var descriptionTaskTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.descriptionTask.text = detailTaskModel.subTask
-        self.titleTask.text = detailTaskModel.task
-        self.dateLabel.date = detailTaskModel.date
+        self.descriptionTaskTextField.text = detailTaskModel.subTask
+        self.titleTaskTextField.text = detailTaskModel.task
+        self.datePicker.date = detailTaskModel.date
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -36,6 +38,10 @@ class TaskDetailViewController: UIViewController {
     }
     
     @IBAction func changeDoneButtonPressed(sender: UIBarButtonItem) {
+        var t = TaskModel(task: titleTaskTextField.text, subTask: descriptionTaskTextField.text, date: datePicker.date)
+        
+        self.mainVC.taskArray[mainVC.tableView.indexPathForSelectedRow()!.row] = t
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {

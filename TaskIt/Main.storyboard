@@ -156,9 +156,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dateLabel" destination="k0V-4E-bJf" id="I45-zp-f2q"/>
-                        <outlet property="descriptionTask" destination="pJ5-Bi-v2W" id="faT-m9-xz2"/>
-                        <outlet property="titleTask" destination="ylK-ef-pNo" id="yFH-0Z-TCt"/>
+                        <outlet property="datePicker" destination="k0V-4E-bJf" id="Mgn-OA-Ojf"/>
+                        <outlet property="descriptionTaskTextField" destination="pJ5-Bi-v2W" id="Vqz-ga-icO"/>
+                        <outlet property="titleTaskTextField" destination="ylK-ef-pNo" id="5vn-rG-zUt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwL-Bb-xsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
