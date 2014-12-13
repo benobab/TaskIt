@@ -13,8 +13,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
 
     //faux tableau de tâches
-    var taskArray:[TaskModel] = [] //[Dictionary<String,String>] = []
-    
+    //[Dictionary<String,String>] = []
+    //vrai tableau de tableau de taches (1 de complétés et 1 de non complétés)
+    var tabDeTabdeTache:[[TaskModel]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +24,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         tableView.dataSource = self
         tableView.delegate = self
+        var taskArray:[TaskModel] = []
+        
         let date1 = Date.from(year: 2014, month: 05, day: 20)
         let date2 = Date.from(year: 2014, month: 03, day: 3)
-        let task1: TaskModel = TaskModel(task: "Study Frenche", subTask: "Bonjour ça va ?", date: date1)
-        let task2: TaskModel = TaskModel(task: "Faire du sport", subTask: "Kitesurf", date: date2)
+        let task1: TaskModel = TaskModel(task: "Study Frenche", subTask: "Bonjour ça va ?", date: date1, completed : false)
+        let task2: TaskModel = TaskModel(task: "Faire du sport", subTask: "Kitesurf", date: date2, completed : false)
         taskArray.append(task1)
         taskArray.append(task2)
         
+        var completedTaskArray = [TaskModel(task: "Elle est", subTask: "Complete celle ci", date: date1, completed: true)]
         // This will refresh our TableView and recal the UITableViewDataSource functions.
+        tabDeTabdeTache = [taskArray,completedTaskArray]
         self.tableView.reloadData()
         
     }
@@ -44,6 +49,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //fonction appellé à chaque fois que la view apparait à l'écran, et non seulement la premiere fois, comme avec viewDidLoad()
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        //ici on trie le taskArray par date : 
+        func sortByDate (a : TaskModel,b : TaskModel) -> Bool{
+            return a.date.timeIntervalSince1970 < b.date.timeIntervalSince1970
+        }
+        for var i = 0 ; i < tabDeTabdeTache.count ; i++ {
+            
+            tabDeTabdeTache[i] = tabDeTabdeTache[i].sorted(sortByDate)
+        }
+        
         self.tableView.reloadData()
     }
 
@@ -53,7 +67,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
              let detailVC: TaskDetailViewController = segue.destinationViewController as TaskDetailViewController
             let indexPath = tableView.indexPathForSelectedRow()
-            let thisTask = taskArray[indexPath!.row]
+            let thisTask = tabDeTabdeTache[indexPath!.section][indexPath!.row]
             detailVC.detailTaskModel = thisTask
             detailVC.mainVC = self
         }else if (segue.identifier == "addTaskSegue" ){
@@ -64,14 +78,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             addTask.mainVC = self
         }
     }
+    
+    
+    
     //UITableViewDataSource
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return tabDeTabdeTache.count
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return taskArray.count
+        return tabDeTabdeTache[section].count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let thisTask = taskArray[indexPath.row]
+        let thisTask = tabDeTabdeTache[indexPath.section][indexPath.row]
         var cell: TaskCell = tableView.dequeueReusableCellWithIdentifier("myCell") as TaskCell
         cell.taskLabel.text = thisTask.task
         cell.descriptionLabel.text = thisTask.subTask
@@ -84,6 +105,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("showDetailSegue", sender: self)
     }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 25
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0{
+            return "To Do"}
+        else{
+            return "Done"}
+    }
+
+        func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+            
+            let thisTask = tabDeTabdeTache[indexPath.section][indexPath.row]
+            
+            if indexPath.section == 0 {
+                var newTask = TaskModel(task: thisTask.task, subTask: thisTask.subTask, date: thisTask.date, completed: true)
+                tabDeTabdeTache[1].append(newTask)
+            }
+            else {
+                var newTask = TaskModel(task: thisTask.task, subTask: thisTask.subTask, date: thisTask.date, completed: false)
+                tabDeTabdeTache[0].append(newTask)
+            }
+            
+            tabDeTabdeTache[indexPath.section].removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        }
+        
+    
     
 }
 
