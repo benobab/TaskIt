@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
-
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
+    
     //faux tableau de tâches
     //[Dictionary<String,String>] = []
     //vrai tableau de tableau de taches (1 de complétés et 1 de non complétés)
@@ -22,21 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // Do any additional setup after loading the view, typically from a nib.
         
-        tableView.dataSource = self
-        tableView.delegate = self
-        var taskArray:[TaskModel] = []
         
-        let date1 = Date.from(year: 2014, month: 05, day: 20)
-        let date2 = Date.from(year: 2014, month: 03, day: 3)
-        let task1: TaskModel = TaskModel(task: "Study Frenche", subTask: "Bonjour ça va ?", date: date1, completed : false)
-        let task2: TaskModel = TaskModel(task: "Faire du sport", subTask: "Kitesurf", date: date2, completed : false)
-        taskArray.append(task1)
-        taskArray.append(task2)
-        
-        var completedTaskArray = [TaskModel(task: "Elle est", subTask: "Complete celle ci", date: date1, completed: true)]
-        // This will refresh our TableView and recal the UITableViewDataSource functions.
-        tabDeTabdeTache = [taskArray,completedTaskArray]
-        self.tableView.reloadData()
         
     }
 
