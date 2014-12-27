@@ -110,11 +110,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let thisTask = tabDeTabdeTache[indexPath.section][indexPath.row]
             
             if indexPath.section == 0 {
-                var newTask = TaskModel(task: thisTask.task, subTask: thisTask.subTask, date: thisTask.date, completed: true)
+                var newTask = TaskModel(task: thisTask.task, subTask: thisTask.subTask, completed: true)
                 tabDeTabdeTache[1].append(newTask)
             }
             else {
-                var newTask = TaskModel(task: thisTask.task, subTask: thisTask.subTask, date: thisTask.date, completed: false)
+                var newTask = TaskModel(task: thisTask.task, subTask: thisTask.subTask, completed: false)
                 tabDeTabdeTache[0].append(newTask)
             }
             
